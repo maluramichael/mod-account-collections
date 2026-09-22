@@ -50,7 +50,7 @@ namespace
     // instead (mirrors mod-guild-tax's EnsureSchema()).
     void EnsureSchema()
     {
-        CharacterDatabase.Execute(
+        CharacterDatabase.DirectExecute(
             "CREATE TABLE IF NOT EXISTS `account_wide_collections` ("
             "`account_id` INT UNSIGNED NOT NULL, "
             "`spell_id` INT UNSIGNED NOT NULL, "
