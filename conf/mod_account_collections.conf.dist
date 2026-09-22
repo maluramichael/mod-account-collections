@@ -1,0 +1,43 @@
+[worldserver]
+
+########################################
+# mod-account-collections configuration
+########################################
+#
+# Mounts and companion (non-combat) pets become account-wide. Whenever a
+# character on an account knows a mount or companion spell, every other
+# character on that account learns it too - no client collections window
+# needed on this 3.3.5a fork. Sync happens at login (both directions) and any
+# newly learned spell is captured live for the next login of other alts.
+#
+
+#
+#    AccountCollections.Enable
+#        Master on/off switch for this module. 0 = the module loads but does
+#        nothing.
+#        Default: 1
+#
+AccountCollections.Enable = 1
+
+#
+#    AccountCollections.IncludeBots
+#        1 = also sync playerbot accounts (altbots and the random fleet).
+#        0 = only real logins are synced/granted; playerbot logins are
+#        skipped entirely (no capture, no grant).
+#        Default: 0
+#
+AccountCollections.IncludeBots = 0
+
+#
+#    AccountCollections.Mounts
+#        1 = track and sync mount spells account-wide.
+#        Default: 1
+#
+AccountCollections.Mounts = 1
+
+#
+#    AccountCollections.Companions
+#        1 = track and sync companion (non-combat pet) spells account-wide.
+#        Default: 1
+#
+AccountCollections.Companions = 1
